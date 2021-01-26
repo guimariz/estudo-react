@@ -4,6 +4,7 @@ const App = () => {
   return (
     <div>
       <Toggle />
+      <img src="" name="" />
       <p>Other Status: </p>
     </div>
   );
@@ -18,7 +19,6 @@ const Toggle = () => {
     <div>
       <p>The Status is: {toggle ? 'ON' : 'OFF'}</p>
       <button onClick={handleToggle}>Toggle</button>
-      <p> dudu safado </p>
     </div>
   );
 };
