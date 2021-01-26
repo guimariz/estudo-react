@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   return (
     <div>
       <Toggle />
+      <p>Other Status: </p>
     </div>
   );
 };
 
-class Toggle extends Component {
-  state = {
-    toggle: false,
-  };
+const Toggle = () => {
+  const [toggle, setToggle] = useState(false);
 
-  render() {
-    return (
-      <div>
-        <p>The Status is: {this.state.toggle ? 'ON' : 'OFF'}</p>
-        <button>Toggle</button>
-      </div>
-    );
-  }
-}
+  const handleToggle = () => setToggle((prevState) => !prevState);
+
+  return (
+    <div>
+      <p>The Status is: {toggle ? 'ON' : 'OFF'}</p>
+      <button onClick={handleToggle}>Toggle</button>
+      <p> dudu safado </p>
+    </div>
+  );
+};
 
 export default App;
